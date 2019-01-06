@@ -1,0 +1,175 @@
+{"rotas":
+  [
+    {
+      "empresa": "NORAM",
+      "voo": "NR1234",
+      "aeronave": "Flock 777",
+      "rota": {
+        "origem": "POA",
+        "nomeDaOrigem": "Porto Alegre",
+        "horarioPartida": "2018-01-05T18:30:00.531Z",
+        "horarioChegada": "2018-01-06T11:53:09.461Z",
+        "destino": "MIA",
+        "nomeDoDestino": "Miami",
+        "paisOrigem": "br",
+        "paisDestino": "us",
+        "escalas": [
+          {
+            "aeroporto": "GIG",
+            "cidade": "Rio de Janeiro",
+            "pais": "br",
+            "tempo": 1.42,
+            "trocaAeronave": false
+          },
+          {
+            "aeroporto": "ATL",
+            "cidade": "Atlanta",
+            "pais": "us",
+            "tempo": 2.83,
+            "trocaAeronave": true
+          }
+        ]
+      },
+      "assentosDisponiveis": 35,
+      "valorPremium": 2429.53,
+      "pontos": 1125,
+      "valor": 3549.87,
+      "moeda": "BRL"
+    },
+    {
+      "empresa": "ROX",
+      "voo": "RX1423",
+      "aeronave": "Shuttle 417",
+      "rota": {
+        "origem": "POA",
+        "nomeDaOrigem": "Porto Alegre",
+        "horarioPartida": "2018-01-05T05:55:00.531Z",
+        "horarioChegada": "2018-01-05T18:13:09.461Z",
+        "destino": "MIA",
+        "nomeDoDestino": "Miami",
+        "paisOrigem": "br",
+        "paisDestino": "us",
+        "escalas": [
+          {
+            "aeroporto": "GRU",
+            "cidade": "Guarulhos",
+            "pais": "br",
+            "tempo": 2.85,
+            "trocaAeronave": true
+          }
+        ]
+      },
+      "assentosDisponiveis": 12,
+      "valorPremium": 2529.53,
+      "pontos": 1475,
+      "valor": 3849.87,
+      "moeda": "BRL"
+    },
+    {
+      "empresa": "ETIP",
+      "voo": "ET3142",
+      "aeronave": "Flock 766-400",
+      "rota": {
+        "origem": "POA",
+        "nomeDaOrigem": "Porto Alegre",
+        "horarioPartida": "2018-01-05T19:35:00.531Z",
+        "horarioChegada": "2018-01-06T14:33:09.461Z",
+        "destino": "MIA",
+        "nomeDoDestino": "Miami",
+        "paisOrigem": "br",
+        "paisDestino": "us",
+        "escalas": [
+          {
+            "aeroporto": "GRU",
+            "cidade": "Guarulhos",
+            "pais": "br",
+            "tempo": 1.45,
+            "trocaAeronave": false
+          },
+          {
+            "aeroporto": "REC",
+            "cidade": "Recife",
+            "pais": "br",
+            "tempo": 3.0,
+            "trocaAeronave": true
+          }
+        ]
+      },
+      "assentosDisponiveis": 45,
+      "valorPremium": 2229.53,
+      "pontos": 925,
+      "valor": 3849.87,
+      "moeda": "BRL"
+    },
+    {
+      "empresa": "FARL",
+      "voo": "FL9876",
+      "aeronave": "Flock 777",
+      "rota": {
+        "origem": "POA",
+        "nomeDaOrigem": "Porto Alegre",
+        "horarioPartida": "2018-01-05T18:40:00.531Z",
+        "horarioChegada": "2018-01-06T15:51:09.461Z",
+        "destino": "MIA",
+        "nomeDoDestino": "Miami",
+        "paisOrigem": "br",
+        "paisDestino": "us",
+        "escalas": [
+          {
+            "aeroporto": "GIG",
+            "cidade": "Rio de Janeiro",
+            "pais": "br",
+            "tempo": 2.42,
+            "trocaAeronave": true
+          },
+          {
+            "aeroporto": "PTY",
+            "cidade": "Cidade do Panama",
+            "pais": "pn",
+            "tempo": 2.83,
+            "trocaAeronave": true
+          }
+        ]
+      },
+      "assentosDisponiveis": 5,
+      "valorPremium": 1929.53,
+      "pontos": 1425,
+      "valor": 3249.87,
+      "moeda": "BRL"
+    },
+    {
+      "empresa": "JAK",
+      "voo": "JK7890",
+      "aeronave": "Shuttle 422",
+      "rota": {
+        "origem": "POA",
+        "nomeDaOrigem": "Porto Alegre",
+        "horarioPartida": "2018-01-05T05:30:00.531Z",
+        "horarioChegada": "2018-01-06T11:33:09.461Z",
+        "destino": "MIA",
+        "nomeDoDestino": "Miami",
+        "paisOrigem": "br",
+        "paisDestino": "us",
+        "escalas": [
+          {
+            "aeroporto": "GRU",
+            "cidade": "Guarulhos",
+            "pais": "br",
+            "tempo": 1.52,
+            "trocaAeronave": true
+          },
+          {
+            "aeroporto": "MEX",
+            "cidade": "Cidade do México",
+            "pais": "mx",
+            "tempo": 4.23,
+            "trocaAeronave": true
+          }
+        ]
+      },
+      "assentosDisponiveis": 60,
+      "valor": 1849.87,
+      "moeda": "BRL"
+    }
+  ]
+}
