@@ -1,8 +1,9 @@
 (ns twjoi.resolvers
-  (:require [cheshire.core :as json]))
+  (:require [cheshire.core :as json]
+            [clojure.java.io :as io]))
 
-
-(def data (as-> "./resources/stub.json" $
+(def data (as-> "stub.json" $
+            (io/resource $)
             (slurp $)
             (json/parse-string $ true)))
 

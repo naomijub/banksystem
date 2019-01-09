@@ -1,8 +1,16 @@
-FROM java:8-alpine
-MAINTAINER Your Name <you@example.com>
+FROM clojure:openjdk-11-lein
+MAINTAINER Julia Naomi <jnaomi@thoughtworks.com>
 
-ADD target/twjoi-0.0.1-SNAPSHOT-standalone.jar /twjoi/app.jar
+EXPOSE 8888
 
-EXPOSE 8080
+RUN lein --version
 
-CMD ["java", "-jar", "/twjoi/app.jar"]
+WORKDIR /api
+
+COPY project.clj ./
+RUN lein deps
+
+COPY . ./
+
+ENTRYPOINT ["bash", "-c"]
+CMD ["lein", "run"]

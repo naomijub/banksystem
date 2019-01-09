@@ -14,7 +14,7 @@
                  [org.slf4j/jcl-over-slf4j "1.7.25"]
                  [org.slf4j/log4j-over-slf4j "1.7.25"]]
   :plugins [[com.jakemccrary/lein-test-refresh "0.22.0"]
-            [lein-cljfmt "0.5.7"]
+            [lein-cljfmt "0.6.3"]
             [lein-ancient "0.6.15"]]
   :min-lein-version "2.0.0"
   :resource-paths ["config", "resources"]

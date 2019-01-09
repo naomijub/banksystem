@@ -1,6 +1,6 @@
 # twjoi
 
-FIXME
+
 
 ## Getting Started
 
@@ -30,16 +30,3 @@ To learn more about configuring Logback, read its [documentation](http://logback
 1. Build an uberjar of your service: `lein uberjar`
 2. Build a Docker image: `sudo docker build -t twjoi .`
 3. Run your Docker image: `docker run -p 8080:8080 twjoi`
-
-### [OSv](http://osv.io/) unikernel support with [Capstan](http://osv.io/capstan/)
-
-1. Build and run your image: `capstan run -f "8080:8080"`
-
-Once the image it built, it's cached.  To delete the image and build a new one:
-
-1. `capstan rmi twjoi; capstan build`
-
-
-## Links
-* [Other examples](https://github.com/pedestal/samples)
-
