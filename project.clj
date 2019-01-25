@@ -1,4 +1,4 @@
-(defproject twjoi "0.0.1-SNAPSHOT"
+(defproject banksystem "0.0.1-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -18,10 +18,10 @@
             [lein-ancient "0.6.15"]]
   :min-lein-version "2.0.0"
   :resource-paths ["config", "resources"]
-  :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "twjoi.core/run-dev"]}
+  :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "banksystem.core/run-dev"]}
                    :dependencies [[io.pedestal/pedestal.service-tools "0.5.5"]]}
-             :uberjar {:aot [twjoi.core]}}
-  :main ^{:skip-aot true} twjoi.core
+             :uberjar {:aot [banksystem.core]}}
+  :main ^{:skip-aot true} banksystem.core
   :test-refresh {:growl false
                  :notify-on-success false
                  :quiet true

@@ -1,7 +1,7 @@
-(ns twjoi.schema-test
+(ns banksystem.schema-test
   (:require [clojure.edn :as edn]
             [clojure.test :refer :all]
-            [twjoi.schema :refer [schema-parser]]))
+            [banksystem.schema :refer [schema-parser]]))
 
 (deftest schema-parser-test
   (testing "schema parser converts slurped Map to EDN format"

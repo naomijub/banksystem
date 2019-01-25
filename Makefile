@@ -14,13 +14,13 @@ uberjar:
 	lein uberjar
 
 build:
-	docker build -t twjoi .
+	docker build -t banksystem .
 
 run: build
-	docker run -p 8888:8888 twjoi "lein run"
+	docker run -p 8888:8888 banksystem "lein run"
 
 test: build
-	docker run -p 8888:8888 twjoi "lein test"
+	docker run -p 8888:8888 banksystem "lein test"
 
 run-local:
 	lein run

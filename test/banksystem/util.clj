@@ -1,5 +1,5 @@
-(ns twjoi.util
-  (:require [twjoi.schema :as schema]
+(ns banksystem.util
+  (:require [banksystem.schema :as schema]
             [com.walmartlabs.lacinia :as lacinia]))
 
 (def schema-util (schema/load-schema))

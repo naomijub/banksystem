@@ -1,9 +1,9 @@
-(ns twjoi.schema
+(ns banksystem.schema
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]
             [com.walmartlabs.lacinia.util :as util]
             [com.walmartlabs.lacinia.schema :as schema]
-            [twjoi.resolvers :refer [resolver-map]]))
+            [banksystem.resolvers :refer [resolver-map]]))
 
 (defn schema-parser [edn]
   (-> (io/resource edn)

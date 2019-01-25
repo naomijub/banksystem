@@ -1,14 +1,18 @@
-(ns twjoi.core
+(ns banksystem.core
   (:gen-class)
   (:require [com.walmartlabs.lacinia.pedestal :as service]
             [io.pedestal.http :as server]
             [io.pedestal.http.route :as route]
-            [twjoi.schema :as schema]))
+            [banksystem.schema :as schema]
+            [banksystem.resolvers :as resolver]))
+
 
 (defn build-service []
-  (service/service-map
-   (schema/load-schema)
-   {:graphiql true}))
+  (merge
+    (service/service-map
+     (schema/load-schema)
+     {:graphiql true})
+    {::server/host "0.0.0.0"}))
 
 (defn start-service [service]
   (server/start

@@ -1,44 +1,13 @@
 {:objects
-
- {:Scale
+ {:Info
   {:fields
-   {:aeroporto {:type String}
-    :cidade {:type String}
-    :pais {:type String}
-    :tempo {:type Float}
-    :trocaAeronave {:type Boolean}}}
-
-  :Route
-  {:fields
-   {:origem {:type String}
-    :nomeDaOrigem {:type String}
-    :horarioPartida {:type String}
-    :horarioChegada {:type String}
-    :destino {:type String}
-    :nomeDoDestino {:type String}
-    :paisOrigem {:type String}
-    :paisDestino {:type String}
-    :escalas {:type (list Scale)}}}
-
-  :RouteInfo
-  {:fields
-   {:empresa {:type String}
-    :voo {:type String}
-    :aeronave {:type String}
-    :rota {:type Route}
-    :assentosDisponiveis {:type Int}
-    :valorPremium {:type Float}
-    :pontos {:type Int}
-    :valor {:type Float}
-    :moeda {:type String}}}
-
-  :Routes
-  {:fields
-   {:rotas {:type (list RouteInfo)}}}}
+   {:id {:type String}
+    :name {:type String}
+    :amount {:type Float}}}}
 
  :queries
- {:routes
-  {:type (list RouteInfo)
-   :args {:origem {:type (non-null String)}
-          :destino {:type (non-null String)}}
-   :resolve :query/routes-origin->destination}}}
+ {:savings
+  {:type  Info
+   :args {:id {:type (non-null String)}}
+
+   :resolve :query/savings}}}
