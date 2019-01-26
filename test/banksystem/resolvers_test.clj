@@ -2,7 +2,6 @@
   (:require [clojure.test :refer :all]
             [banksystem.resolvers :refer :all]))
 
-
 (deftest resolvers-map-test
   (let [map (resolver-map)]
     (testing "resolver-map contains correct keys"

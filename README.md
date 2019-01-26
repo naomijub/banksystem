@@ -1,6 +1,8 @@
 # banksystem
 
 
+## Testing
+I was unable to make context flexible for testing and for prod. It should be simple, but didn't work.
 
 ## Getting Started
 

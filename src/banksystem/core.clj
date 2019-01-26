@@ -6,13 +6,12 @@
             [banksystem.schema :as schema]
             [banksystem.resolvers :as resolver]))
 
-
 (defn build-service []
   (merge
-    (service/service-map
-     (schema/load-schema)
-     {:graphiql true})
-    {::server/host "0.0.0.0"}))
+   (service/service-map
+    (schema/load-schema)
+    {:graphiql true})
+   {::server/host "0.0.0.0"}))
 
 (defn start-service [service]
   (server/start
