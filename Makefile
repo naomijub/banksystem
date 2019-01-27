@@ -27,3 +27,9 @@ run-local:
 
 test-local:
 	lein test
+
+run-cassandra:
+	docker run -it --rm --name graphql-cassandra -p 9042:9042 -v "$(PWD)/dev-resources/testseed.cql:/testseed.cql" cassandra:3.11.1
+
+seed-cassandra:
+	docker exec -t graphql-cassandra cqlsh --debug -f /tesstseed.cql
