@@ -1,0 +1,15 @@
+language: clojure
+
+sudo: enabled
+lein: lein
+
+before_script:
+  - lein deps
+
+script:
+  - lein cljfmt check
+  - lein test
+  - lein ancient
+
+jdk:
+  - openjdk11
