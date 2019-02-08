@@ -7,9 +7,9 @@ before_script:
   - lein deps
 
 script:
+  - lein ancient
   - lein cljfmt check
   - lein test
-  - lein ancient
 
 jdk:
   - openjdk11
