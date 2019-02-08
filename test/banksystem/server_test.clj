@@ -6,7 +6,7 @@
 
 (deftest GQL-endpoint-queries
   (testing "routes with no optional args"
-    (is (= "{\"data\":{\"savings\":{\"name\":\"Julia\",\"amount\":5000.0}}}"
-           (json/generate-string (util/q "{savings(id:\"d3bbb532-0548-4fd1-856c-01a9701b0749\"){name, amount}}"))))
-    (is (= {:data {:savings {:name "Julia" :amount 5000.0}}}
-           (util/q "{savings(id:\"d3bbb532-0548-4fd1-856c-01a9701b0749\"){name, amount}}")))))
+    (is (= "{\"data\":{\"savings\":{\"name\":\"Teste1\",\"amount\":5000.0}}}"
+           (json/generate-string (util/q "{savings(uuid:\"d3bbb532-0548-4fd1-856c-01a9701b0749\"){name, amount}}"))))
+    (is (= {:data {:savings {:name "Teste1" :amount 5000.0}}}
+           (util/q "{savings(uuid:\"d3bbb532-0548-4fd1-856c-01a9701b0749\"){name, amount}}")))))

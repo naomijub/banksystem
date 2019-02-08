@@ -8,6 +8,6 @@
  :queries
  {:savings
   {:type  Info
-   :args {:id {:type (non-null String)}}
+   :args {:uuid {:type (non-null String)}}
 
    :resolve :query/savings}}}

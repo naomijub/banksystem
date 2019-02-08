@@ -10,7 +10,7 @@
       (slurp)
       (edn/read-string)))
 
-(defn load-schema []
+(defn load-schema [db]
   (-> (schema-parser "schema.edn")
-      (util/attach-resolvers (resolver-map))
+      (util/attach-resolvers (resolver-map db))
       (schema/compile)))
