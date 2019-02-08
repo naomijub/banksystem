@@ -6,7 +6,7 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [io.pedestal/pedestal.service "0.5.5"]
                  [io.pedestal/pedestal.jetty "0.5.5"]
-                 [com.walmartlabs/lacinia "0.31.0"]
+                 [com.walmartlabs/lacinia "0.32.0"]
                  [com.walmartlabs/lacinia-pedestal "0.11.0"]
                  [ch.qos.logback/logback-classic "1.2.3" :exclusions [org.slf4j/slf4j-api]]
                  [cheshire "5.8.1"]
