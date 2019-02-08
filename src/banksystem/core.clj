@@ -9,7 +9,7 @@
 (defn build-service []
   (merge
    (service/service-map
-    (schema/load-schema)
+    (schema/load-schema resolver/data)
     {:graphiql true})
    {::server/host "0.0.0.0"}))
 

@@ -6,9 +6,9 @@
                  :ded6809d-1840-4194-88cc-37c6d342e13e
                  {:id "54321" :name "Naomi" :amount 10000.0}}))
 
-(defn savings [context {id :id} _]
+(defn savings [db context {id :id} _]
   (let [key-id (keyword id)]
-    (get @data key-id)))
+    (get @db key-id)))
 
-(defn resolver-map []
-  {:query/savings (partial savings)})
+(defn resolver-map [db]
+  {:query/savings (partial savings db)})
