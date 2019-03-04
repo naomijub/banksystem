@@ -3,11 +3,17 @@
   {:fields
    {:id {:type String}
     :name {:type String}
-    :amount {:type Float}}}}
+    :amount {:type Float}}}
+  :UUID
+  {:fields
+   {:uuid {:type String}}}}
 
  :queries
  {:savings
   {:type  Info
    :args {:uuid {:type (non-null String)}}
+   :resolve :query/savings}
 
-   :resolve :query/savings}}}
+  :accounts
+  {:type  (list UUID)
+   :resolve :query/accounts}}}

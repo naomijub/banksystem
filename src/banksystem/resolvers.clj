@@ -10,5 +10,9 @@
   (let [key-id (keyword uuid)]
     (get @db key-id)))
 
+(defn accounts [db context _ _]
+  (map (fn [id] {:uuid (name id)}) (keys @db)))
+
 (defn resolver-map [db]
-  {:query/savings (partial savings db)})
+  {:query/savings (partial savings db)
+   :query/accounts (partial accounts db)})

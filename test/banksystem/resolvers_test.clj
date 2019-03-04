@@ -6,4 +6,5 @@
 (deftest resolvers-map-test
   (let [map (resolver-map [])]
     (testing "resolver-map contains correct keys"
-      (is (contains? map :query/savings)))))
+      (is (contains? map :query/savings))
+      (is (contains? map :query/accounts)))))
