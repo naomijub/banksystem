@@ -11,3 +11,9 @@
 
 (defn q [query-string]
   (lacinia/execute schema-util query-string nil nil))
+
+(defn get-message [query]
+  (-> query
+    (get :errors)
+    (first)
+    (get :message)))
