@@ -19,11 +19,11 @@
     (is (= {:data
             {:deposit
              {:amount 5100.0 :name "Teste1"}}}
-          (util/q "mutation {deposit(uuid: \"d3bbb532-0548-4fd1-856c-01a9701b0749\", amount: 100){amount,name}}"))))
+           (util/q "mutation {deposit(uuid: \"d3bbb532-0548-4fd1-856c-01a9701b0749\", amount: 100){amount,name}}"))))
   (testing "error message for deposit"
     (is (= "Valor deve ser maior que 0"
-          (util/get-message
-           (util/q "mutation {deposit(uuid: \"d3bbb532-0548-4fd1-856c-01a9701b0749\", amount: -100){amount,name}}"))))
+           (util/get-message
+            (util/q "mutation {deposit(uuid: \"d3bbb532-0548-4fd1-856c-01a9701b0749\", amount: -100){amount,name}}"))))
     (is (= "Id inexistente"
-          (util/get-message
-           (util/q "mutation {deposit(uuid: \"d32-0548-4fd1-856c-01a9701b0749\", amount: 100){amount,name}}"))))))
+           (util/get-message
+            (util/q "mutation {deposit(uuid: \"d32-0548-4fd1-856c-01a9701b0749\", amount: 100){amount,name}}"))))))

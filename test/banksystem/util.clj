@@ -14,6 +14,6 @@
 
 (defn get-message [query]
   (-> query
-    (get :errors)
-    (first)
-    (get :message)))
+      (get :errors)
+      (first)
+      (get :message)))
