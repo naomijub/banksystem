@@ -7,4 +7,5 @@
   (let [map (resolver-map [])]
     (testing "resolver-map contains correct keys"
       (is (contains? map :query/savings))
-      (is (contains? map :query/accounts)))))
+      (is (contains? map :query/accounts))
+      (is (contains? map :mutation/deposit)))))

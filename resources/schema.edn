@@ -16,4 +16,12 @@
 
   :accounts
   {:type  (list UUID)
-   :resolve :query/accounts}}}
+   :resolve :query/accounts}}
+
+ :mutations
+ {:deposit
+  {:type :Info
+   :args
+   {:uuid {:type (non-null String)}
+    :amount {:type (non-null Float)}}
+   :resolve :mutation/deposit}}}

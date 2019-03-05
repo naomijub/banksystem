@@ -1,5 +1,6 @@
 (ns banksystem.resolvers
-  (:require [cheshire.core :as json]))
+  (:require [cheshire.core :as json]
+            [com.walmartlabs.lacinia.resolve :refer [with-error]]))
 
 (def data (atom {:d3bbb532-0548-4fd1-856c-01a9701b0749
                  {:id "12345" :name "Julia" :amount 5000.0}
@@ -10,9 +11,17 @@
   (let [key-id (keyword uuid)]
     (get @db key-id)))
 
-(defn accounts [db context _ _]
+(defn accounts [db context {uuid :uuid} _]
   (map (fn [id] {:uuid (name id)}) (keys @db)))
+
+(defn deposit [db context {uuid :uuid amount :amount} _]
+  (let [key-id (keyword uuid)
+        info (get @db key-id)]
+    (do
+      (swap! db update-in [key-id :amount] + amount)
+      (get @db key-id))))
 
 (defn resolver-map [db]
   {:query/savings (partial savings db)
-   :query/accounts (partial accounts db)})
+   :query/accounts (partial accounts db)
+   :mutation/deposit (partial deposit db)})
